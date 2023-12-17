@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Magnetic</title>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="app.css?x=2">
 </head>
 <body>
 
@@ -19,251 +19,18 @@
 <div class="nav">
     <div class="wrapper">
         <div class="logo"></div>
-        
+
         <div class="search">
-            <input type="text" id="search" class="custom-element" placeholder="">
+            <div class="search_containment">
+                <input type="text" id="search" class="custom-element" placeholder="">
+                <button class="clear-search" data-action="clear_search" data-hidden="0"></button>
+            </div>
             <button class="custom-element" data-action="do_search">Search</button>
         </div>
 
         <div class="filter">
             <button class="custom-element" data-action="toggle_filter">Filter</button>
-
-            <div class="box" data-hidden="1">
-                <div class="title">Filter <div class="exit-icon" data-action="filter_close">&#10005;</div></div>
-
-                <div class="group">
-                    <div class="cgroup">
-                        <div class="title2">Generic</div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt1" data-filter="generic:tool"/>
-                            <label for="opt1">Tool</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt2" data-filter="generic:game"/>
-                            <label for="opt2">Game</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt3" data-filter="generic:media"/>
-                            <label for="opt3">Media</label>
-                        </div>
-                    </div>
-
-                    <div class="cgroup">
-                        <div class="title2">Game</div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt4" data-filter="game:simulation"/>
-                            <label for="opt4">Simulation</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt5" data-filter="game:stealth"/>
-                            <label for="opt5">Stealth</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt6" data-filter="game:survival"/>
-                            <label for="opt6">Survival</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt7" data-filter="game:horror"/>
-                            <label for="opt7">Horror</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt8" data-filter="game:action"/>
-                            <label for="opt8">Action</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt9" data-filter="game:sandbox"/>
-                            <label for="opt9">Sandbox</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt10" data-filter="game:shooter"/>
-                            <label for="opt10">Shooter</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt11" data-filter="game:racing"/>
-                            <label for="opt11">Racing</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt12" data-filter="game:adventure"/>
-                            <label for="opt12">Adventure</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt13" data-filter="game:arcade"/>
-                            <label for="opt13">Arcade</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt14" data-filter="game:violence"/>
-                            <label for="opt14">Violence</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt15" data-filter="game:first_person"/>
-                            <label for="opt15">First-person</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt16" data-filter="game:third_person"/>
-                            <label for="opt16">Third-person</label>
-                        </div>
-                        
-                        <div class="opt">
-                            <input type="checkbox" id="opt17" data-filter="game:open_world"/>
-                            <label for="opt17">Open world</label>
-                        </div>                        
-                    </div>
-
-                    <div class="cgroup">
-                        <div class="title2">Tool</div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt18" data-filter="tool:audio_authoring"/>
-                            <label for="opt18">Audio Authoring</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt19" data-filter="tool:photo_authoring"/>
-                            <label for="opt19">Photo Authoring</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt20" data-filter="tool:video_authoring"/>
-                            <label for="opt20">Video Authoring</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt21" data-filter="tool:administrative"/>
-                            <label for="opt21">Administrative</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt22" data-filter="tool:networking"/>
-                            <label for="opt22">Networking</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt23" data-filter="tool:operating_system"/>
-                            <label for="opt23">Operating System</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt24" data-filter="tool:office"/>
-                            <label for="opt24">Office</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt25" data-filter="tool:modelling"/>
-                            <label for="opt25">Modelling</label>
-                        </div>
-                    </div>
-
-                    <div class="cgroup">
-                        <div class="title2">Media</div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt26" data-filter="media:audio"/>
-                            <label for="opt26">Audio</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt27" data-filter="media:video"/>
-                            <label for="opt27">Video</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt28" data-filter="media:movie"/>
-                            <label for="opt28">Movie</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt29" data-filter="media:music"/>
-                            <label for="opt29">Music</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt30" data-filter="media:documentary"/>
-                            <label for="opt30">Documentary</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt31" data-filter="media:series"/>
-                            <label for="opt31">Series</label>
-                        </div>
-                    </div>
-
-                    <div class="cgroup">
-                        <div class="title2">Uploaders</div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt32" data-filter="uploader:1"/>
-                            <label for="opt32">AiTB</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt33" data-filter="uploader:2"/>
-                            <label for="opt33">Ali-TPB</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt34" data-filter="uploader:3"/>
-                            <label for="opt34">Sunblock.</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt35" data-filter="uploader:4"/>
-                            <label for="opt35">ThumperTM</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt36" data-filter="uploader:5"/>
-                            <label for="opt36">dauphong</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt37" data-filter="uploader:6"/>
-                            <label for="opt37">extremezone</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt38" data-filter="uploader:7"/>
-                            <label for="opt38">fitgirl</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt39" data-filter="uploader:8"/>
-                            <label for="opt39">haxnode</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt40" data-filter="uploader:9"/>
-                            <label for="opt40">l.diliberto</label>
-                        </div>
-
-                        <div class="opt">
-                            <input type="checkbox" id="opt41" data-filter="uploader:10"/>
-                            <label for="opt41">rjaa</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="buttons">
-                    <button class="custom-element" data-action="filter_reset">Reset</button>
-                    <button class="custom-element" data-action="filter_close">Close</button>
-                </div>
-            </div>
-
+            <div class="box" data-hidden="1"></div>
         </div>
 
         <div class="extra">
@@ -279,19 +46,15 @@
             <div class="part cover"></div>
 
             <div class="part name">
-                <span>Name</span>
+                <span>Name &amp; Size</span>
             </div>
 
             <div class="part uploaded_by">
-                <span>Uploaded by</span>
-            </div>
-
-            <div class="part size">
-                <span>Size</span>
+                <span>Uploader</span>
             </div>
 
             <div class="part platforms">
-                <span>Platforms</span>
+                <span>Platform</span>
             </div>
 
             <div class="part state">
@@ -303,13 +66,12 @@
             </div>
         </div>
 
-        <div class="xhr_results">
-        </div>
+        <div class="xhr_results"></div>
 
     </div>
 </div>
 
-<script src="app.js"></script>
+<script src="app.js?x=2"></script>
 
 </body>
 </html>
