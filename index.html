@@ -4,9 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Magnetic</title>
-    <link rel="stylesheet" href="app.css?x=2">
+    <link rel="stylesheet" href="app.css?x=3">
 </head>
-<body>
+<body class="theme-default">
+
+<div class="load-overlay" data-hidden="0"></div>
 
 <div class="decrypt_overlay" data-hidden="1">
     <div class="decrypt_box">
@@ -23,7 +25,7 @@
         <div class="search">
             <div class="search_containment">
                 <input type="text" id="search" class="custom-element" placeholder="">
-                <button class="clear-search" data-action="clear_search" data-hidden="0"></button>
+                <button class="clear-search" data-action="clear_search" data-hidden="1"></button>
             </div>
             <button class="custom-element" data-action="do_search">Search</button>
         </div>
@@ -35,6 +37,24 @@
 
         <div class="extra">
             <b>version <span class="version">0.1</span><br><span class="records"></span> records</b>
+        </div>
+
+        <div class="theme">
+            <button class="custom-element" data-action="toggle_theme_sel">Theme</button>
+            <div class="box" data-hidden="1">
+                <div class="item" data-action="select_theme" data-theme="0">
+                    <img src="img/theme/0.png">
+                    <div class="text">Default</div>
+                </div>
+                <div class="item" data-action="select_theme" data-theme="1">
+                    <img src="img/theme/1.png">
+                    <div class="text">Dark</div>
+                </div>
+                <div class="item" data-action="select_theme" data-theme="2">
+                    <img src="img/theme/2.png">
+                    <div class="text">Dark (OLED)</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -71,7 +91,7 @@
     </div>
 </div>
 
-<script src="app.js?x=2"></script>
+<script src="app.js?x=3"></script>
 
 </body>
 </html>
