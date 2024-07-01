@@ -1,93 +1,134 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Magnetic</title>
-    <link rel="stylesheet" href="app.css?x=6">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Magnetic Bundles</title>
 </head>
-<body class="theme-default">
+<body>
+<style>
+* {
+  outline: 0 !important;
+  box-sizing: border-box !important;
+}
 
-<div class="load-overlay" data-hidden="0"></div>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #0D0;
+  font-family: monospace, monospace !important;
+  font-size: 14pt;
+}
 
-<div class="decrypt_overlay" data-hidden="1">
-    <div class="decrypt_box">
-        <input type="text" class="custom-element kinput" placeholder="Decryption Key">
-        <span class="err"></span>
-        <button class="custom-element" onclick="do_decrypt()">Decrypt</button>
+#view {
+  width: 960px;
+  margin: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.bundles {
+  width: 90%;
+  margin: auto;
+}
+
+.bundles .item {
+  width: 100%;
+  border: 1px solid #0D0;
+  border-bottom: 0;
+}
+
+.bundles .body .anchor-item:last-child .item {
+  border-bottom: 1px solid #0D0;
+}
+
+.bundles .head {
+  width: 100%;
+  font-weight: bold;
+  float: left;
+  border: 1px solid #0D0;
+  border-bottom: 0;
+}
+
+.bundles .head *,
+.bundles .body * {
+  height: inherit;
+  float: left;
+}
+
+.bundles .date {
+  width: 20%;
+  border-right: 1px solid #0D0;
+  padding: 4px 6px;
+}
+
+.bundles .records {
+  width: 20%;
+  border-right: 1px solid #0D0;
+  padding: 4px 6px;
+}
+
+.bundles .filename {
+  width: 40%;
+  border-right: 1px solid #0D0;
+  padding: 4px 6px;
+}
+
+.bundles .filesize {
+  width: 15%;
+  padding: 4px 6px;
+}
+
+.anchor-item {
+  width: 100%;
+  text-decoration: none;
+  color: #0D0;
+}
+
+.anchor-item:hover .item,
+.bundles .item:hover {
+  background-color: #0D0;
+  color: #000;
+}
+
+.foot {
+  width: 100%;
+  margin-top: 300px;
+  text-align: center;
+}
+
+/* Private key hint: NzZEQTg5NjYyNkRCRTVCMDE2ODk3MzA1RDY1ODc3RDRBQjBEQkI2MzQ5MzU5QkJGQzkzMjFGNTZCRDhGQzIxMkUyMjg0QjNDQUY0ODkyMjk4RjE5NjQwQkQzRTZGNzZFRDg4NEM0MjhCNzg1NURCQTdGNTUyMDcyNjc2QjQ4RTk */
+</style>
+
+<div id="view">
+  <div class="center">
+    <h1>Magnetic Bundles</h1>
+    <p>Magnetic no longer provides an interface,<br>instead you can download packed record bundles,<br>which you can access with the private key.</p>
+  </div>
+
+  <div class="bundles">
+    <div class="head">
+      <div class="date">DATE</div>
+      <div class="records">RECORDS</div>
+      <div class="filename">FILENAME</div>
+      <div class="filesize">FILESIZE</div>
     </div>
-</div>
-
-<div class="nav">
-    <div class="wrapper">
-        <div class="logo"></div>
-
-        <div class="search">
-            <div class="search_containment">
-                <input type="text" id="search" class="custom-element" placeholder="">
-                <button class="clear-search" data-action="clear_search" data-hidden="1"></button>
-            </div>
-            <button class="custom-element" data-action="do_search">Search</button>
+    <div class="body">
+      <a class="anchor-item" href="https://github.com/m4gn3t1c/m4gn3t1c.github.io/releases/download/240702/magnetic-2024-07-02.7z" download="magnetic-2024-07-02.7z">
+        <div class="item">
+          <div class="date">2024-07-02</div>
+          <div class="records">217</div>
+          <div class="filename">magnetic-2024-07-02.7z</div>
+          <div class="filesize">32,658,740</div>
         </div>
-
-        <div class="filter">
-            <button class="custom-element" data-action="toggle_filter">Filter</button>
-            <div class="box" data-hidden="1"></div>
-        </div>
-
-        <div class="extra">
-            <b>version <span class="version"></span><br><span class="records"></span> records</b>
-        </div>
-
-        <div class="theme">
-            <button class="custom-element" data-action="toggle_theme_sel">Theme</button>
-            <div class="box" data-hidden="1">
-                <div class="item" data-action="select_theme" data-theme="0">
-                    <img src="img/theme/0.png">
-                    <div class="text">Default</div>
-                </div>
-                <div class="item" data-action="select_theme" data-theme="1">
-                    <img src="img/theme/1.png">
-                    <div class="text">Dark</div>
-                </div>
-                <div class="item" data-action="select_theme" data-theme="2">
-                    <img src="img/theme/2.png">
-                    <div class="text">Dark (OLED)</div>
-                </div>
-            </div>
-        </div>
+      </a>
     </div>
+  </div>
+
+  <div class="foot">(c) magnetic - 2024 and beyond</div>
 </div>
-
-<div class="wrapper">
-    <div class="results">
-
-        <div class="item head">
-            <div class="part cover"></div>
-
-            <div class="part name">
-                <span>Name &amp; Size</span>
-            </div>
-
-            <div class="part uploaded_by">
-                <span>Uploader</span>
-            </div>
-
-            <div class="part platforms">
-                <span>Platform</span>
-            </div>
-
-            <div class="part category">
-                <span>Category</span>
-            </div>
-        </div>
-
-        <div class="xhr_results"></div>
-
-    </div>
-</div>
-
-<script src="app.js?x=6"></script>
-
 </body>
 </html>
