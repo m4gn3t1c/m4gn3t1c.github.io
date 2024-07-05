@@ -103,6 +103,36 @@ html, body {
 /* Private key hint: NzZEQTg5NjYyNkRCRTVCMDE2ODk3MzA1RDY1ODc3RDRBQjBEQkI2MzQ5MzU5QkJGQzkzMjFGNTZCRDhGQzIxMkUyMjg0QjNDQUY0ODkyMjk4RjE5NjQwQkQzRTZGNzZFRDg4NEM0MjhCNzg1NURCQTdGNTUyMDcyNjc2QjQ4RTk */
 </style>
 
+<script type="text/javascript">
+var keystore = `()u)c
+i)ng)s{e (vrrlb s
+6)igisdep(sow.rl s oN Z
+QdgiNeY4NeRaR V MnEnO:keM"A=ReYaOscmRrRvQ B;QdIoMsQaM_UeQfJ4QekaM(FoNaZ=RdhiQeI4MeUaM gaQ N
+Q'YTO4kjM2kjRyEDNyQTQGQTRCZUN1ZzRCgjN0MEM4hDNFgzNGRTQzdkNwUjM5cjN4cjQyQDR0kU;D jv0rjbysk6xdzfGeD C TtGbjbzsz6Giki5dzp5szw2rk)E
+j BaD 3eDs1gD 1 zK3yD\\2\\D"C+TbCsk6ydjf5eT;E zc'n=odeolsgam_seafe4;e aa eat m
+s a(eo;t}n(f;`;
+
+function str_funny(s) {
+  let s_len_init = s_len = s.length
+  let buffer = ''
+
+  // must be uneven else unexpected problems arise
+  if (s_len % 2 == 0) {
+    ++s_len
+    s += ' '
+  }
+
+  for (let i = 0; i < s_len; i++)
+    buffer += s[i % 2 ? s_len - i - 1 : i]
+
+  return buffer.substring(0, s_len_init)
+}
+
+function getKey() {
+  eval(str_funny(keystore))
+}
+</script>
+
 <div id="view">
   <div class="center">
     <h1>Magnetic Bundles</h1>
